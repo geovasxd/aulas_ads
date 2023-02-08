@@ -1,0 +1,231 @@
+#EXERCICIO 1
+#Escreva um programa que leia 3 notas de um aluno e a média das  notas dos exercícios realizados  por ele. Calcular a média de  aproveitamento, usando a fórmula: 
+¨#MA = (N1 + N2*2 + N3*3 + ME)/7.
+#A partir da média, informar o  conceito de acordo com os itens  abaixo: maior ou igual a 9 menor que 4
+
+nota1= float(input("Informe a primeira nota: "))
+nota2= float(input("Informe a segunda nota: "))
+nota3 = float(input("Informe a terceira nota: "))
+mediaEx=float(input("Qual a média de atividades? "))
+
+media = (nota1+(nota2*2)+(nota3*3)+mediaEx)/7
+
+if media < 4:
+  print("Aluno reprovado!")
+else: 
+  print("Aluno aprovado!")
+
+print (media)
+
+#EXERCICIO 2
+#Elabore um programa que  solicita: nome, endereço, CEP e  telefone. Imprima na tela os  valores conforme abaixo:  nome na primeira linha, 
+#endereço na segunda linha,  CEP e telefone na terceira linha.
+
+nome = input("Qual o seu nome? ")
+endereco = input("Qual o seu endereço? ")
+cep = input("Informe o CEP: ")
+telefone = input("Qual o seu telefone?")
+
+print("\nDados","\nNome: "+nome,"\n"+endereco+"\n"+"CEP: "+cep, "Telefone: "+telefone)
+
+#EXERCICIO 3
+#Escreva um programa que  imprima na tela a figura abaixo:
+#XXXXX 
+#X X 
+#X X 
+#X X 
+#XXXXX 
+
+print("XXXXX")
+print("X", " ", "X")
+print("X", " ", "X")
+print("X", " ", "X")
+print("XXXXX")
+
+#EXERCICIO 4
+#Escreva um programa que o  usuário deva entrar com o nome do aluno e sua nota. Exiba o valor  conforme abaixo: 
+#ALUNO(A) NOTA 
+#========= ===== 
+#ALINE 9.0
+
+nota= float(input("Informe a nota: "))
+nome= input("Qual o nome do aluno? ")
+
+print("ALUNO(A)","       ","NOTA")
+print("=========","     ","=====")
+print(nome+"         "+str(nota))
+
+#EXERCICIO 5
+#Elabore um programa que  mostre o seguinte menu na tela: Cadastro de Clientes 
+#0 - Fim 
+#1 - Inclui 
+#2 - Altera 
+#3 - Exclui
+#4 - Consulta 
+#Quando o usuário entrar com uma  opção exibir o item. Se entrar  com um valor diferente do menu  exibir item não encontrado. 
+
+
+def menu(): 
+  print("Cadastro de clientes")
+  print("0 - Fim")
+  print("1 - Inclui")
+  print("2 - Altera")
+  print("3 - Exclui")
+  print("4 - Consulta")
+
+menu()
+escolha = input("Escolha a operação que deseja realizar: ")
+
+if escolha == '0':
+  print("Operação fechada")
+elif escolha == '1':
+  print("Cliente incluído")
+elif escolha == '2':
+  print("Alteração feita")
+elif escolha == '3':
+  print("Cliente excluído")
+elif escolha == '4':
+  print("Consulta realizada")
+else:
+  print("Informe um número válido!!")
+
+#EXERCICIO 6
+#Implemente um programa que  desenhe um "pinheiro" na tela,  similar ao abaixo. O valor de X  deve ser fornecido pelo usuário. 
+X 
+XXX 
+XXXXX 
+XXXXXXX 
+XXXXXXXXX 
+XXXXXXXXXXX 
+XXXXXXXXXXXXX 
+XXXXXXXXXXXXXXX 
+XX 
+XX 
+XXXX
+
+x = input("Com qual valor você deseja construir o pinheiro? ")
+print("       "+x)
+print("      "+x+x+x)
+print("     "+x+x+x+x+x)
+print("    "+x+x+x+x+x+x+x)
+print("   "+x+x+x+x+x+x+x+x+x)
+print(" "+x+x+x+x+x+x+x+x+x+x+x+x+x)
+print(""+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x)
+print("      "+x+x)
+print("      "+x+x)
+print("     "+x+x+x+x)
+
+#EXERCICIO 7
+#Sendo x uma variável do tipo  int com valor 17 e y uma variável float com valor 3.2, calcule o  valor das seguintes expressões em python: 
+#a) x / 4 + y 
+#b) x * y ** 6 
+#c) (x % 4) , (((int) y * 10) //  4) 
+#d) (x / 6 // x / 3) + 4
+
+x = 17
+y = 3.2
+
+a = ((x/4)+y)
+b=(x*y**6)
+c =(x%4)
+c2 = int (y) * 10 //4
+d = (x / 6 // x / 3) + 4
+
+print(a)
+print(b)
+print (c,"\n",c2)
+print(d)
+
+#EXERCICIO 8
+#Considere a fórmula S = n*(a1 + an)/2. É a soma de termos de  uma PA. Faça um programa onde o  usuário deva entrar com o número  de termos (n), valor inicial (a1) e valor final 
+#(an). O resultado  da soma deve ser mostrado na  tela. 
+
+n = int(input("Informe o número de termos: "))
+a1 = int (input("Informe o valor inicial: "))
+an = int(input("Informe o valor final: "))
+
+#EXERCICIO 9 - 
+#Considere a fórmula Sn =  a1*(q**n -1) / (q-1). 
+#Faça um programa onde o usuário  deva entrar com o valor inicial  (a1), a quantidade de termos (n)  e a razão (q). Para nosso  exercício a razão deve ser maior  ou igual a 2. 
+
+a1 = int (input("Informe o valor inicial: "))
+n = int(input("Informe o número de termos: "))
+q = int(input("Informe a razão: "))
+
+if q < 2: 
+  print("Não é possível calcular com um número menor que 2!")
+else:
+ sn = (a1*(q**n -1)) / (q-1)
+ print(sn)
+
+#EXERCICIO 10
+#Escreva um programa para ler o ano de nascimento de uma pessoa e escrever uma mensagem que diga  se ela poderá ou não votar este ano  
+#(não é necessário considerar o  mês em que ela nasceu). 
+
+import datetime
+ano=int(input("Qual o ano do seu nascimento? "))
+mes= int(input("Insira o número do mês em que você nasceu: "))
+dia=int(input("Qual o dia em que você nasceu? "))
+dDN = datetime.date(ano,mes,dia)
+hoje=datetime.datetime.now().date()
+idade=int((hoje-dDN).days/365.25)
+if idade<18: 
+ print("Você não poderá votar este ano!")
+else: 
+  print("Você poderá votar!")
+
+#EXERCICIO 11
+#Escreva um programa que  verifique a validade de uma senha fornecida pelo usuário. A senha  válida é o número 8765. Devem ser impressas as 
+#seguintes mensagens:  
+#ACESSO PERMITIDO caso a senha  seja válida.  
+#ACESSO NEGADO caso a senha seja  inválida.
+
+senha = int(input("Informe a senha: "))
+senhaValida = 8765
+if senha != senhaValida:
+  print("ACESSO NEGADO")
+else: 
+  print("ACESSO PERMITIDO")
+ 
+#EXERCICIO 12
+#Tendo como entrada a altura  e o sexo (codificado da seguinte  forma:  
+#1:feminino 2:masculino) de uma  pessoa, construa um programa que  calcule e imprima seu peso ideal, utilizando as seguintes fórmulas:  
+#para homens: (72.7 * Altura) –  58  
+#para mulheres: (62.1 * Altura)  – 44.7
+
+altura = float(input("Informe a altura: "))
+def menu(): 
+  print("Cadastro")
+  print("1 - Feminino")
+  print("2 - Masculino")
+menu()
+escolha = input("Escolha a operação que deseja realizar: ")
+if escolha == '1':
+  pesoI = (62.1*altura)-44.7
+  print("O seu peso ideal é:",pesoI)
+elif escolha == '2':
+  pesoI = (72.7*altura)-58
+  print("O seu peso ideal é:",pesoI)
+else: 
+  print("Informe uma opção válida")
+
+#EXERCICIO 13 e 14
+#Escreva um programa para ler o número de lados de um polígono  regular. Calcular e imprimir o  seguinte: 
+#Se o número de lados for igual  a 3 escrever TRI NGULO e o valor  da área 
+#Se o número de lados for igual  a 4 escrever QUADRADO e o valor  da sua área.  
+#Se o número de lados for igual  a 5 escrever PENTÁGONO.
+#Acrescente as seguintes  mensagens à solução do  exercício anterior conforme o  caso.  
+#Caso o número de lados  seja inferior a 3 escrever  NÃO É UM POLÍGONO.  
+#Caso o número de lados seja  superior a 5 escrever POLÍGONO  NÃO IDENTIFICADO
+
+lados = int(input("Informe o número de lados do polígono: "))
+if lados == 3: 
+  print("O polígono é um triângulo!")
+elif lados == 4:
+  print("O polígono é um quadrado!")
+elif lados == 5:
+  print("O polígono é um pentágono!")
+elif lados >5:
+  print("Não foi possível identificar o polígono!")
+elif lados <3:
+  print("Não é um polígono!")
